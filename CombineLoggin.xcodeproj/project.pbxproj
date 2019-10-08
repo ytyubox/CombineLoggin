@@ -13,18 +13,10 @@
 		A79A92C2234C88FB00FC9AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79A92C0234C88FB00FC9AA4 /* Main.storyboard */; };
 		A79A92C4234C88FD00FC9AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79A92C3234C88FD00FC9AA4 /* Assets.xcassets */; };
 		A79A92C7234C88FD00FC9AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79A92C5234C88FD00FC9AA4 /* LaunchScreen.storyboard */; };
-		A79A92D2234C88FD00FC9AA4 /* CombineLogginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92D1234C88FD00FC9AA4 /* CombineLogginTests.swift */; };
+		A79A92DD234C8B5900FC9AA4 /* Pr_CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92DC234C8B5900FC9AA4 /* Pr_CombineCompatible.swift */; };
+		A7CF5982234C9A520006CA55 /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF5981234C9A520006CA55 /* UIControl+Combine.swift */; };
+		A7CF5984234C9AD60006CA55 /* Pw_UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF5983234C9AD60006CA55 /* Pw_UserDefault.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A79A92CE234C88FD00FC9AA4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79A92AF234C88FB00FC9AA4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A79A92B6234C88FB00FC9AA4;
-			remoteInfo = CombineLoggin;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A79A92B7234C88FB00FC9AA4 /* CombineLoggin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineLoggin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,20 +27,13 @@
 		A79A92C3234C88FD00FC9AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A79A92C6234C88FD00FC9AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A79A92C8234C88FD00FC9AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A79A92CD234C88FD00FC9AA4 /* CombineLogginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombineLogginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A79A92D1234C88FD00FC9AA4 /* CombineLogginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLogginTests.swift; sourceTree = "<group>"; };
-		A79A92D3234C88FD00FC9AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79A92DC234C8B5900FC9AA4 /* Pr_CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pr_CombineCompatible.swift; sourceTree = "<group>"; };
+		A7CF5981234C9A520006CA55 /* UIControl+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Combine.swift"; sourceTree = "<group>"; };
+		A7CF5983234C9AD60006CA55 /* Pw_UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pw_UserDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A79A92B4234C88FB00FC9AA4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A79A92CA234C88FD00FC9AA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				A79A92B9234C88FB00FC9AA4 /* CombineLoggin */,
-				A79A92D0234C88FD00FC9AA4 /* CombineLogginTests */,
 				A79A92B8234C88FB00FC9AA4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				A79A92B7234C88FB00FC9AA4 /* CombineLoggin.app */,
-				A79A92CD234C88FD00FC9AA4 /* CombineLogginTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,24 +62,42 @@
 		A79A92B9234C88FB00FC9AA4 /* CombineLoggin */ = {
 			isa = PBXGroup;
 			children = (
-				A79A92BA234C88FB00FC9AA4 /* AppDelegate.swift */,
-				A79A92BC234C88FB00FC9AA4 /* SceneDelegate.swift */,
+				A7CF597E234C99CE0006CA55 /* NoChange */,
 				A79A92BE234C88FB00FC9AA4 /* ViewController.swift */,
+				A7CF5985234C9B210006CA55 /* UserDefault */,
+				A7CF5980234C9A040006CA55 /* CombineCompatible */,
 				A79A92C0234C88FB00FC9AA4 /* Main.storyboard */,
-				A79A92C3234C88FD00FC9AA4 /* Assets.xcassets */,
-				A79A92C5234C88FD00FC9AA4 /* LaunchScreen.storyboard */,
 				A79A92C8234C88FD00FC9AA4 /* Info.plist */,
 			);
 			path = CombineLoggin;
 			sourceTree = "<group>";
 		};
-		A79A92D0234C88FD00FC9AA4 /* CombineLogginTests */ = {
+		A7CF597E234C99CE0006CA55 /* NoChange */ = {
 			isa = PBXGroup;
 			children = (
-				A79A92D1234C88FD00FC9AA4 /* CombineLogginTests.swift */,
-				A79A92D3234C88FD00FC9AA4 /* Info.plist */,
+				A79A92BA234C88FB00FC9AA4 /* AppDelegate.swift */,
+				A79A92BC234C88FB00FC9AA4 /* SceneDelegate.swift */,
+				A79A92C3234C88FD00FC9AA4 /* Assets.xcassets */,
+				A79A92C5234C88FD00FC9AA4 /* LaunchScreen.storyboard */,
 			);
-			path = CombineLogginTests;
+			path = NoChange;
+			sourceTree = "<group>";
+		};
+		A7CF5980234C9A040006CA55 /* CombineCompatible */ = {
+			isa = PBXGroup;
+			children = (
+				A79A92DC234C8B5900FC9AA4 /* Pr_CombineCompatible.swift */,
+				A7CF5981234C9A520006CA55 /* UIControl+Combine.swift */,
+			);
+			path = CombineCompatible;
+			sourceTree = "<group>";
+		};
+		A7CF5985234C9B210006CA55 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				A7CF5983234C9AD60006CA55 /* Pw_UserDefault.swift */,
+			);
+			path = UserDefault;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,24 +120,6 @@
 			productReference = A79A92B7234C88FB00FC9AA4 /* CombineLoggin.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A79A92CC234C88FD00FC9AA4 /* CombineLogginTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A79A92D9234C88FD00FC9AA4 /* Build configuration list for PBXNativeTarget "CombineLogginTests" */;
-			buildPhases = (
-				A79A92C9234C88FD00FC9AA4 /* Sources */,
-				A79A92CA234C88FD00FC9AA4 /* Frameworks */,
-				A79A92CB234C88FD00FC9AA4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A79A92CF234C88FD00FC9AA4 /* PBXTargetDependency */,
-			);
-			name = CombineLogginTests;
-			productName = CombineLogginTests;
-			productReference = A79A92CD234C88FD00FC9AA4 /* CombineLogginTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,10 +132,6 @@
 				TargetAttributes = {
 					A79A92B6234C88FB00FC9AA4 = {
 						CreatedOnToolsVersion = 11.0;
-					};
-					A79A92CC234C88FD00FC9AA4 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = A79A92B6234C88FB00FC9AA4;
 					};
 				};
 			};
@@ -170,7 +149,6 @@
 			projectRoot = "";
 			targets = (
 				A79A92B6234C88FB00FC9AA4 /* CombineLoggin */,
-				A79A92CC234C88FD00FC9AA4 /* CombineLogginTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,13 +164,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A79A92CB234C88FD00FC9AA4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -201,28 +172,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79A92BF234C88FB00FC9AA4 /* ViewController.swift in Sources */,
+				A7CF5984234C9AD60006CA55 /* Pw_UserDefault.swift in Sources */,
+				A79A92DD234C8B5900FC9AA4 /* Pr_CombineCompatible.swift in Sources */,
 				A79A92BB234C88FB00FC9AA4 /* AppDelegate.swift in Sources */,
+				A7CF5982234C9A520006CA55 /* UIControl+Combine.swift in Sources */,
 				A79A92BD234C88FB00FC9AA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A79A92C9234C88FD00FC9AA4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A79A92D2234C88FD00FC9AA4 /* CombineLogginTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A79A92CF234C88FD00FC9AA4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A79A92B6234C88FB00FC9AA4 /* CombineLoggin */;
-			targetProxy = A79A92CE234C88FD00FC9AA4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A79A92C0234C88FB00FC9AA4 /* Main.storyboard */ = {
@@ -363,12 +321,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AMPL46LPV;
 				INFOPLIST_FILE = CombineLoggin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aa.CombineLoggin;
+				PRODUCT_BUNDLE_IDENTIFIER = ytyubox.CombineLoggin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,57 +339,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AMPL46LPV;
 				INFOPLIST_FILE = CombineLoggin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aa.CombineLoggin;
+				PRODUCT_BUNDLE_IDENTIFIER = ytyubox.CombineLoggin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A79A92DA234C88FD00FC9AA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CombineLogginTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = aa.CombineLogginTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CombineLoggin.app/CombineLoggin";
-			};
-			name = Debug;
-		};
-		A79A92DB234C88FD00FC9AA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CombineLogginTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = aa.CombineLogginTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CombineLoggin.app/CombineLoggin";
 			};
 			name = Release;
 		};
@@ -451,15 +369,6 @@
 			buildConfigurations = (
 				A79A92D7234C88FD00FC9AA4 /* Debug */,
 				A79A92D8234C88FD00FC9AA4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A79A92D9234C88FD00FC9AA4 /* Build configuration list for PBXNativeTarget "CombineLogginTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A79A92DA234C88FD00FC9AA4 /* Debug */,
-				A79A92DB234C88FD00FC9AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

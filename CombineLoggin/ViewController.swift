@@ -7,14 +7,51 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var accountTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var autoLoginSwitch: UISwitch!
+    @IBOutlet weak var loginButton: UIButton!
+    var set = Set<AnyCancellable>()
+    let setting = Setting()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+        let accountPublisher = accountTextField
+            .publisher(for: .editingChanged)
+            .map(\.text)
+            .prepend(setting.keepAccount)
+            .replaceNil(with: "")
+        let passwordPublisher = passwordTextField
+            .publisher(for: .editingChanged)
+            .map(\.text)
+            .replaceNil(with: "")
+        Publishers.CombineLatest(accountPublisher, passwordPublisher)
+            .map{$0.0.count > 2 && $0.1.count > 2}
+            .assign(to: \UIButton.isEnabled, on: loginButton)
+            .store(in: &set)
+        setting.subject
+            .first()
+            .map{!$0.isEmpty}
+            .assign(to: \.isOn, on: autoLoginSwitch)
+            .store(in: &set)
+        setting.subject
+            .first()
+            .map{$0 as String?}
+            .assign(to: \.text, on: accountTextField)
+            .store(in: &set)
+        autoLoginSwitch.publisher(for: .valueChanged).map(\.isOn)
+            .combineLatest(accountPublisher)
+            .map{ $0.0 ? $0.1 : ""}
+            .receive(on: RunLoop.main)
+            .assign(to: \Setting.keepAccount, on: setting).store(in: &set)
+        }
 }
 
+class Setting {
+    @UserDefault("Account", defaultValue: "") var keepAccount:String
+    
+    lazy var subject = CurrentValueSubject<String, Never>(self.keepAccount)
+}

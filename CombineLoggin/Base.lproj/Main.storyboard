@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,83 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CombineLoggin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nad-Th-YOG">
+                                <rect key="frame" x="121" y="292" width="263" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vab-2w-8sK">
+                                <rect key="frame" x="121" y="347" width="263" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ytW-Wq-hSB">
+                                <rect key="frame" x="223" y="419" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="賬號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl1-V3-XNC">
+                                <rect key="frame" x="47" y="299" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjk-Qb-4mC">
+                                <rect key="frame" x="47" y="354" width="35" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記住賬號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyL-hi-jSA">
+                                <rect key="frame" x="145" y="424" width="70" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="5lz-St-X3t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzI-ie-vsk">
+                                <rect key="frame" x="191.5" y="505" width="31" height="30"/>
+                                <state key="normal" title="登入"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Nad-Th-YOG" firstAttribute="trailing" secondItem="Vab-2w-8sK" secondAttribute="trailing" id="0OX-Aj-aTR"/>
+                            <constraint firstItem="MzI-ie-vsk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="38Q-sk-cQN"/>
+                            <constraint firstItem="Vab-2w-8sK" firstAttribute="top" secondItem="Nad-Th-YOG" secondAttribute="bottom" constant="21" id="5AC-r4-jzK"/>
+                            <constraint firstItem="bl1-V3-XNC" firstAttribute="centerY" secondItem="Nad-Th-YOG" secondAttribute="centerY" id="ER9-qS-fJg"/>
+                            <constraint firstItem="wjk-Qb-4mC" firstAttribute="top" secondItem="bl1-V3-XNC" secondAttribute="bottom" constant="34" id="FEk-a0-U7c"/>
+                            <constraint firstItem="ytW-Wq-hSB" firstAttribute="leading" secondItem="YyL-hi-jSA" secondAttribute="trailing" constant="8" id="N54-Ar-GHE"/>
+                            <constraint firstItem="MzI-ie-vsk" firstAttribute="top" secondItem="YyL-hi-jSA" secondAttribute="bottom" constant="63" id="NDg-py-ixp"/>
+                            <constraint firstItem="YyL-hi-jSA" firstAttribute="top" secondItem="Vab-2w-8sK" secondAttribute="bottom" constant="42" id="Qsb-fm-chi"/>
+                            <constraint firstItem="bl1-V3-XNC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="Rym-Mj-9Pb"/>
+                            <constraint firstItem="wjk-Qb-4mC" firstAttribute="centerY" secondItem="Vab-2w-8sK" secondAttribute="centerY" id="W1q-tA-XHF"/>
+                            <constraint firstItem="bl1-V3-XNC" firstAttribute="leading" secondItem="wjk-Qb-4mC" secondAttribute="leading" id="Y37-c0-gdq"/>
+                            <constraint firstItem="Nad-Th-YOG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="248" id="Yoj-a7-IEe"/>
+                            <constraint firstItem="Nad-Th-YOG" firstAttribute="leading" secondItem="Vab-2w-8sK" secondAttribute="leading" id="c9p-ER-pnz"/>
+                            <constraint firstItem="bl1-V3-XNC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="eMr-zH-rQa"/>
+                            <constraint firstItem="YyL-hi-jSA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="mxn-NR-Rr8"/>
+                            <constraint firstItem="Nad-Th-YOG" firstAttribute="leading" secondItem="bl1-V3-XNC" secondAttribute="trailing" constant="39" id="pS3-0v-86E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nad-Th-YOG" secondAttribute="trailing" constant="30" id="srf-Mg-ujI"/>
+                            <constraint firstItem="ytW-Wq-hSB" firstAttribute="top" secondItem="Vab-2w-8sK" secondAttribute="bottom" constant="37" id="wq2-Ti-bQB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="accountTextField" destination="Nad-Th-YOG" id="8cM-MQ-eaB"/>
+                        <outlet property="autoLoginSwitch" destination="ytW-Wq-hSB" id="Brk-RA-ZrR"/>
+                        <outlet property="loginButton" destination="MzI-ie-vsk" id="aFi-Z7-ZET"/>
+                        <outlet property="passwordTextField" destination="Vab-2w-8sK" id="Sih-oD-3Bf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
