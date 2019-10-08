@@ -42,8 +42,8 @@ class ViewController: UIViewController {
             .map{$0 as String?}
             .assign(to: \.text, on: accountTextField)
             .store(in: &set)
-        autoLoginSwitch.publisher(for: .valueChanged).map(\.isOn)
-            .combineLatest(accountPublisher)
+        autoLoginSwitch.publisher(for: .valueChanged).map(\.isOn).prepend(autoLoginSwitch.isOn)
+            .combineLatest(accountPublisher.debounce(for: .seconds(0.5), scheduler: RunLoop.main))
             .map{ $0.0 ? $0.1 : ""}
             .receive(on: RunLoop.main)
             .assign(to: \Setting.keepAccount, on: setting).store(in: &set)
