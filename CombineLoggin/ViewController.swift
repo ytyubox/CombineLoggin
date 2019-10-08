@@ -32,12 +32,12 @@ class ViewController: UIViewController {
             .map{$0.0.count > 2 && $0.1.count > 2}
             .assign(to: \UIButton.isEnabled, on: loginButton)
             .store(in: &set)
-        setting.subject
+        setting.oneTimePublisher
             .first()
             .map{!$0.isEmpty}
             .assign(to: \.isOn, on: autoLoginSwitch)
             .store(in: &set)
-        setting.subject
+        setting.oneTimePublisher
             .first()
             .map{$0 as String?}
             .assign(to: \.text, on: accountTextField)
@@ -48,10 +48,4 @@ class ViewController: UIViewController {
             .receive(on: RunLoop.main)
             .assign(to: \Setting.keepAccount, on: setting).store(in: &set)
         }
-}
-
-class Setting {
-    @UserDefault("Account", defaultValue: "") var keepAccount:String
-    
-    lazy var subject = CurrentValueSubject<String, Never>(self.keepAccount)
 }

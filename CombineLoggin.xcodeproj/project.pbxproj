@@ -16,6 +16,7 @@
 		A79A92DD234C8B5900FC9AA4 /* Pr_CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92DC234C8B5900FC9AA4 /* Pr_CombineCompatible.swift */; };
 		A7CF5982234C9A520006CA55 /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF5981234C9A520006CA55 /* UIControl+Combine.swift */; };
 		A7CF5984234C9AD60006CA55 /* Pw_UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF5983234C9AD60006CA55 /* Pw_UserDefault.swift */; };
+		A7CF5988234CA1D80006CA55 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF5987234CA1D80006CA55 /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		A79A92DC234C8B5900FC9AA4 /* Pr_CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pr_CombineCompatible.swift; sourceTree = "<group>"; };
 		A7CF5981234C9A520006CA55 /* UIControl+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Combine.swift"; sourceTree = "<group>"; };
 		A7CF5983234C9AD60006CA55 /* Pw_UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pw_UserDefault.swift; sourceTree = "<group>"; };
+		A7CF5986234C9D8F0006CA55 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A7CF5987234CA1D80006CA55 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 		A79A92AE234C88FB00FC9AA4 = {
 			isa = PBXGroup;
 			children = (
+				A7CF5986234C9D8F0006CA55 /* README.md */,
 				A79A92B9234C88FB00FC9AA4 /* CombineLoggin */,
 				A79A92B8234C88FB00FC9AA4 /* Products */,
 			);
@@ -64,6 +68,7 @@
 			children = (
 				A7CF597E234C99CE0006CA55 /* NoChange */,
 				A79A92BE234C88FB00FC9AA4 /* ViewController.swift */,
+				A7CF5987234CA1D80006CA55 /* Setting.swift */,
 				A7CF5985234C9B210006CA55 /* UserDefault */,
 				A7CF5980234C9A040006CA55 /* CombineCompatible */,
 				A79A92C0234C88FB00FC9AA4 /* Main.storyboard */,
@@ -175,6 +180,7 @@
 				A7CF5984234C9AD60006CA55 /* Pw_UserDefault.swift in Sources */,
 				A79A92DD234C8B5900FC9AA4 /* Pr_CombineCompatible.swift in Sources */,
 				A79A92BB234C88FB00FC9AA4 /* AppDelegate.swift in Sources */,
+				A7CF5988234CA1D80006CA55 /* Setting.swift in Sources */,
 				A7CF5982234C9A520006CA55 /* UIControl+Combine.swift in Sources */,
 				A79A92BD234C88FB00FC9AA4 /* SceneDelegate.swift in Sources */,
 			);
