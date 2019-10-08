@@ -33,19 +33,18 @@ class ViewController: UIViewController {
             .assign(to: \UIButton.isEnabled, on: loginButton)
             .store(in: &set)
         setting.oneTimePublisher
-            .first()
             .map{!$0.isEmpty}
             .assign(to: \.isOn, on: autoLoginSwitch)
             .store(in: &set)
-        setting.oneTimePublisher
-            .first()
+       _ = setting.oneTimePublisher
             .map{$0 as String?}
             .assign(to: \.text, on: accountTextField)
-            .store(in: &set)
-        autoLoginSwitch.publisher(for: .valueChanged).map(\.isOn).prepend(autoLoginSwitch.isOn)
+            
+       _ = autoLoginSwitch.publisher(for: .valueChanged).map(\.isOn).prepend(autoLoginSwitch.isOn)
             .combineLatest(accountPublisher.debounce(for: .seconds(0.5), scheduler: RunLoop.main))
             .map{ $0.0 ? $0.1 : ""}
             .receive(on: RunLoop.main)
-            .assign(to: \Setting.keepAccount, on: setting).store(in: &set)
+            .assign(to: \Setting.keepAccount, on: setting)
+            .store(in: &set)
         }
 }
