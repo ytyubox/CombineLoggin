@@ -47,5 +47,10 @@ class ViewController: UIViewController {
             .receive(on: RunLoop.main)
             .assign(to: \Setting.keepAccount, on: setting)
             .store(in: &set)
+        loginButton.publisher(for: .touchUpInside)
+            .sink { (_) in
+                let vc = UIViewController()
+                self.present(vc, animated: true, completion: nil)
+        }.store(in: &set)
         }
 }
