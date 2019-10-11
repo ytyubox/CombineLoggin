@@ -14,7 +14,7 @@ class ListViewConcroller: UIViewController,Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var resourcePublisher : AnyPublisher<[String],Never>!
+    var resourcePublisher : Just<[String]>!
     var set = Set<AnyCancellable>()
     override func viewDidLoad() {
         super.viewDidLoad()

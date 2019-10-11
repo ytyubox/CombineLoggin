@@ -13,5 +13,6 @@ class Setting {
     @UserDefault("Account", defaultValue: "") var keepAccount:String
     @UserDefault("logginDate", defaultValue: []) var logginDate:[String]
     
-    lazy var oneTimePublisher = Just(self.keepAccount)
+    var oneTimePublisher: Just<String> {Just(self.keepAccount)}
+    var logginDatePublisher:Just<[String]>{Just(self.logginDate)}
 }

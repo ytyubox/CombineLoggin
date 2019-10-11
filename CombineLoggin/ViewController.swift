@@ -53,7 +53,7 @@ class ViewController: UIViewController {
                 let now = Date().description
                 self.setting.logginDate.append(now)
                 let vc = ListViewConcroller.instantiate()
-                vc.resourcePublisher = Just(self.setting.logginDate).eraseToAnyPublisher()
+                vc.resourcePublisher = self.setting.logginDatePublisher
                 self.present(vc, animated: true, completion: nil)
         }.store(in: &set)
     }
