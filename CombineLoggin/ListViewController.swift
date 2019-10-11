@@ -14,5 +14,15 @@ class ListViewConcroller: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var resourcePublisher : AnyPublisher<[String],Never>!
+    var set = Set<AnyCancellable>()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        resourcePublisher.bind(subscriber:
+            (tableView.rowsSubscriber(cellIdentifier: "Cell", cellType: UITableViewCell.self) { (cell, indexPath, model) in
+                cell.textLabel?.text = model
+                })
+        )
+        .store(in: &set)
+    }
 }
