@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A69478223509777004F7A51 /* CombineDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 9A69478123509777004F7A51 /* CombineDataSources */; };
 		A77355D5234E09E700F9AE10 /* CombineHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A77355D4234E09E700F9AE10 /* CombineHelper */; };
 		A79A92BB234C88FB00FC9AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92BA234C88FB00FC9AA4 /* AppDelegate.swift */; };
 		A79A92BD234C88FB00FC9AA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92BC234C88FB00FC9AA4 /* SceneDelegate.swift */; };
@@ -38,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A77355D5234E09E700F9AE10 /* CombineHelper in Frameworks */,
+				9A69478223509777004F7A51 /* CombineDataSources in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +113,7 @@
 			name = CombineLoggin;
 			packageProductDependencies = (
 				A77355D4234E09E700F9AE10 /* CombineHelper */,
+				9A69478123509777004F7A51 /* CombineDataSources */,
 			);
 			productName = CombineLoggin;
 			productReference = A79A92B7234C88FB00FC9AA4 /* CombineLoggin.app */;
@@ -142,6 +145,7 @@
 			mainGroup = A79A92AE234C88FB00FC9AA4;
 			packageReferences = (
 				A77355D3234E09E700F9AE10 /* XCRemoteSwiftPackageReference "CombineHelper" */,
+				9A69478023509777004F7A51 /* XCRemoteSwiftPackageReference "CombineDataSources" */,
 			);
 			productRefGroup = A79A92B8234C88FB00FC9AA4 /* Products */;
 			projectDirPath = "";
@@ -374,6 +378,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9A69478023509777004F7A51 /* XCRemoteSwiftPackageReference "CombineDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/combineopensource/CombineDataSources";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.4;
+			};
+		};
 		A77355D3234E09E700F9AE10 /* XCRemoteSwiftPackageReference "CombineHelper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ytyubox/CombineHelper";
@@ -385,6 +397,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9A69478123509777004F7A51 /* CombineDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A69478023509777004F7A51 /* XCRemoteSwiftPackageReference "CombineDataSources" */;
+			productName = CombineDataSources;
+		};
 		A77355D4234E09E700F9AE10 /* CombineHelper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A77355D3234E09E700F9AE10 /* XCRemoteSwiftPackageReference "CombineHelper" */;
