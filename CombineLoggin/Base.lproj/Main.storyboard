@@ -23,7 +23,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vab-2w-8sK">
                                 <rect key="frame" x="121" y="347" width="263" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ytW-Wq-hSB">
                                 <rect key="frame" x="223" y="419" width="51" height="31"/>
@@ -91,7 +91,7 @@
         <!--List View Concroller-->
         <scene sceneID="mNe-dB-mUd">
             <objects>
-                <viewController id="IJc-dA-LiE" customClass="ListViewConcroller" customModule="CombineLoggin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewConcroller" id="IJc-dA-LiE" customClass="ListViewConcroller" customModule="CombineLoggin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3V-PR-WW8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

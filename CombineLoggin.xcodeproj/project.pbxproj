@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A69478223509777004F7A51 /* CombineDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 9A69478123509777004F7A51 /* CombineDataSources */; };
 		9ADFBDDC23509A3500681E6F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFBDDB23509A3500681E6F /* ListViewController.swift */; };
+		9ADFBDDE23509F2200681E6F /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFBDDD23509F2200681E6F /* Storyboarded.swift */; };
 		A77355D5234E09E700F9AE10 /* CombineHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A77355D4234E09E700F9AE10 /* CombineHelper */; };
 		A79A92BB234C88FB00FC9AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92BA234C88FB00FC9AA4 /* AppDelegate.swift */; };
 		A79A92BD234C88FB00FC9AA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92BC234C88FB00FC9AA4 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		9ADFBDDB23509A3500681E6F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		9ADFBDDD23509F2200681E6F /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		A79A92B7234C88FB00FC9AA4 /* CombineLoggin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineLoggin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79A92BA234C88FB00FC9AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A79A92BC234C88FB00FC9AA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				A7CF5985234C9B210006CA55 /* UserDefault */,
 				A79A92C0234C88FB00FC9AA4 /* Main.storyboard */,
 				9ADFBDDB23509A3500681E6F /* ListViewController.swift */,
+				9ADFBDDD23509F2200681E6F /* Storyboarded.swift */,
 				A79A92C8234C88FD00FC9AA4 /* Info.plist */,
 			);
 			path = CombineLoggin;
@@ -183,6 +186,7 @@
 				A79A92BB234C88FB00FC9AA4 /* AppDelegate.swift in Sources */,
 				A7CF5988234CA1D80006CA55 /* Setting.swift in Sources */,
 				A79A92BD234C88FB00FC9AA4 /* SceneDelegate.swift in Sources */,
+				9ADFBDDE23509F2200681E6F /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ import Combine
 class Setting {
     
     @UserDefault("Account", defaultValue: "") var keepAccount:String
+    @UserDefault("logginDate", defaultValue: []) var logginDate:[String]
     
     lazy var oneTimePublisher = Just(self.keepAccount)
 }

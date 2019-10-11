@@ -49,12 +49,12 @@ class ViewController: UIViewController {
             .store(in: &set)
         loginButton.publisher(for: .touchUpInside)
             .sink { (_) in
-                let vc = UIViewController()
+                self.passwordTextField.text = ""
+                let now = Date().description
+                self.setting.logginDate.append(now)
+                let vc = ListViewConcroller.instantiate()
+                vc.resourcePublisher = Just(self.setting.logginDate).eraseToAnyPublisher()
                 self.present(vc, animated: true, completion: nil)
         }.store(in: &set)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        passwordTextField.text = ""
     }
 }

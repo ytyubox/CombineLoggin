@@ -10,7 +10,7 @@ import UIKit
 import Combine
 import CombineDataSources
 
-class ListViewConcroller: UIViewController {
+class ListViewConcroller: UIViewController,Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,8 +21,8 @@ class ListViewConcroller: UIViewController {
         resourcePublisher.bind(subscriber:
             (tableView.rowsSubscriber(cellIdentifier: "Cell", cellType: UITableViewCell.self) { (cell, indexPath, model) in
                 cell.textLabel?.text = model
-                })
+            })
         )
-        .store(in: &set)
+            .store(in: &set)
     }
 }
