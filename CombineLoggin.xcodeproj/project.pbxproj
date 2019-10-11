@@ -72,11 +72,10 @@
 			children = (
 				A7CF597E234C99CE0006CA55 /* NoChange */,
 				A79A92BE234C88FB00FC9AA4 /* ViewController.swift */,
-				A7CF5987234CA1D80006CA55 /* Setting.swift */,
-				A7CF5985234C9B210006CA55 /* UserDefault */,
-				A79A92C0234C88FB00FC9AA4 /* Main.storyboard */,
 				9ADFBDDB23509A3500681E6F /* ListViewController.swift */,
-				9ADFBDDD23509F2200681E6F /* Storyboarded.swift */,
+				A7CF5987234CA1D80006CA55 /* Setting.swift */,
+				A7CF5985234C9B210006CA55 /* helper */,
+				A79A92C0234C88FB00FC9AA4 /* Main.storyboard */,
 				A79A92C8234C88FD00FC9AA4 /* Info.plist */,
 			);
 			path = CombineLoggin;
@@ -93,12 +92,13 @@
 			path = NoChange;
 			sourceTree = "<group>";
 		};
-		A7CF5985234C9B210006CA55 /* UserDefault */ = {
+		A7CF5985234C9B210006CA55 /* helper */ = {
 			isa = PBXGroup;
 			children = (
+				9ADFBDDD23509F2200681E6F /* Storyboarded.swift */,
 				A7CF5983234C9AD60006CA55 /* Pw_UserDefault.swift */,
 			);
-			path = UserDefault;
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
