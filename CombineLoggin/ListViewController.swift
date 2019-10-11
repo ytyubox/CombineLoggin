@@ -10,7 +10,7 @@ import UIKit
 import Combine
 import CombineDataSources
 
-class ListViewConcroller: UIViewController,Storyboarded {
+class ListViewConcroller: UIViewController, Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
     

@@ -1,4 +1,7 @@
 #  CombineLoggin
 
-![](/CombineLoggin/demoPic.png)
+![](/ReadmeResources/demoPic.png)
 
+## CombineDataSources demo
+
+![](/ReadmeResources/CombineDataSourcesDemo.png)
