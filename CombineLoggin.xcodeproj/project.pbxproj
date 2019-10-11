@@ -3,18 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A77355D5234E09E700F9AE10 /* CombineHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A77355D4234E09E700F9AE10 /* CombineHelper */; };
 		A79A92BB234C88FB00FC9AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92BA234C88FB00FC9AA4 /* AppDelegate.swift */; };
 		A79A92BD234C88FB00FC9AA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92BC234C88FB00FC9AA4 /* SceneDelegate.swift */; };
 		A79A92BF234C88FB00FC9AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92BE234C88FB00FC9AA4 /* ViewController.swift */; };
 		A79A92C2234C88FB00FC9AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79A92C0234C88FB00FC9AA4 /* Main.storyboard */; };
 		A79A92C4234C88FD00FC9AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79A92C3234C88FD00FC9AA4 /* Assets.xcassets */; };
 		A79A92C7234C88FD00FC9AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79A92C5234C88FD00FC9AA4 /* LaunchScreen.storyboard */; };
-		A79A92DD234C8B5900FC9AA4 /* Pr_CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A92DC234C8B5900FC9AA4 /* Pr_CombineCompatible.swift */; };
-		A7CF5982234C9A520006CA55 /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF5981234C9A520006CA55 /* UIControl+Combine.swift */; };
 		A7CF5984234C9AD60006CA55 /* Pw_UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF5983234C9AD60006CA55 /* Pw_UserDefault.swift */; };
 		A7CF5988234CA1D80006CA55 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF5987234CA1D80006CA55 /* Setting.swift */; };
 /* End PBXBuildFile section */
@@ -28,8 +27,6 @@
 		A79A92C3234C88FD00FC9AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A79A92C6234C88FD00FC9AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A79A92C8234C88FD00FC9AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A79A92DC234C8B5900FC9AA4 /* Pr_CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pr_CombineCompatible.swift; sourceTree = "<group>"; };
-		A7CF5981234C9A520006CA55 /* UIControl+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Combine.swift"; sourceTree = "<group>"; };
 		A7CF5983234C9AD60006CA55 /* Pw_UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pw_UserDefault.swift; sourceTree = "<group>"; };
 		A7CF5986234C9D8F0006CA55 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A7CF5987234CA1D80006CA55 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
@@ -40,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A77355D5234E09E700F9AE10 /* CombineHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +68,6 @@
 				A79A92BE234C88FB00FC9AA4 /* ViewController.swift */,
 				A7CF5987234CA1D80006CA55 /* Setting.swift */,
 				A7CF5985234C9B210006CA55 /* UserDefault */,
-				A7CF5980234C9A040006CA55 /* CombineCompatible */,
 				A79A92C0234C88FB00FC9AA4 /* Main.storyboard */,
 				A79A92C8234C88FD00FC9AA4 /* Info.plist */,
 			);
@@ -86,15 +83,6 @@
 				A79A92C5234C88FD00FC9AA4 /* LaunchScreen.storyboard */,
 			);
 			path = NoChange;
-			sourceTree = "<group>";
-		};
-		A7CF5980234C9A040006CA55 /* CombineCompatible */ = {
-			isa = PBXGroup;
-			children = (
-				A79A92DC234C8B5900FC9AA4 /* Pr_CombineCompatible.swift */,
-				A7CF5981234C9A520006CA55 /* UIControl+Combine.swift */,
-			);
-			path = CombineCompatible;
 			sourceTree = "<group>";
 		};
 		A7CF5985234C9B210006CA55 /* UserDefault */ = {
@@ -121,6 +109,9 @@
 			dependencies = (
 			);
 			name = CombineLoggin;
+			packageProductDependencies = (
+				A77355D4234E09E700F9AE10 /* CombineHelper */,
+			);
 			productName = CombineLoggin;
 			productReference = A79A92B7234C88FB00FC9AA4 /* CombineLoggin.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +140,9 @@
 				Base,
 			);
 			mainGroup = A79A92AE234C88FB00FC9AA4;
+			packageReferences = (
+				A77355D3234E09E700F9AE10 /* XCRemoteSwiftPackageReference "CombineHelper" */,
+			);
 			productRefGroup = A79A92B8234C88FB00FC9AA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -178,10 +172,8 @@
 			files = (
 				A79A92BF234C88FB00FC9AA4 /* ViewController.swift in Sources */,
 				A7CF5984234C9AD60006CA55 /* Pw_UserDefault.swift in Sources */,
-				A79A92DD234C8B5900FC9AA4 /* Pr_CombineCompatible.swift in Sources */,
 				A79A92BB234C88FB00FC9AA4 /* AppDelegate.swift in Sources */,
 				A7CF5988234CA1D80006CA55 /* Setting.swift in Sources */,
-				A7CF5982234C9A520006CA55 /* UIControl+Combine.swift in Sources */,
 				A79A92BD234C88FB00FC9AA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A77355D3234E09E700F9AE10 /* XCRemoteSwiftPackageReference "CombineHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ytyubox/CombineHelper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A77355D4234E09E700F9AE10 /* CombineHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A77355D3234E09E700F9AE10 /* XCRemoteSwiftPackageReference "CombineHelper" */;
+			productName = CombineHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A79A92AF234C88FB00FC9AA4 /* Project object */;
 }
