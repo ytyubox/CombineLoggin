@@ -37,11 +37,11 @@ class ViewController: UIViewController {
             .map{!$0.isEmpty}
             .assign(to: \.isOn, on: autoLoginSwitch)
             .store(in: &set)
-       _ = setting.oneTimePublisher
+        _ = setting.oneTimePublisher
             .map{$0 as String?}
             .assign(to: \.text, on: accountTextField)
-            
-       _ = autoLoginSwitch.publisher(for: .valueChanged).map(\.isOn).prepend(autoLoginSwitch.isOn)
+        
+        _ = autoLoginSwitch.publisher(for: .valueChanged).map(\.isOn).prepend(autoLoginSwitch.isOn)
             .combineLatest(accountPublisher.debounce(for: .seconds(0.5), scheduler: RunLoop.main))
             .map{ $0.0 ? $0.1 : ""}
             .receive(on: RunLoop.main)
@@ -52,5 +52,9 @@ class ViewController: UIViewController {
                 let vc = UIViewController()
                 self.present(vc, animated: true, completion: nil)
         }.store(in: &set)
-        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        passwordTextField.text = ""
+    }
 }
