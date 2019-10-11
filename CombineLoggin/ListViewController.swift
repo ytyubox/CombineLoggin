@@ -18,11 +18,11 @@ class ListViewConcroller: UIViewController,Storyboarded {
     var set = Set<AnyCancellable>()
     override func viewDidLoad() {
         super.viewDidLoad()
-        resourcePublisher.bind(subscriber:
-            (tableView.rowsSubscriber(cellIdentifier: "Cell", cellType: UITableViewCell.self) { (cell, indexPath, model) in
-                cell.textLabel?.text = model
-            })
-        )
-            .store(in: &set)
+        let subscriber:AnySubscriber<[String],Never> = tableView
+            .rowsSubscriber(cellIdentifier: "Cell",
+                            cellType: UITableViewCell.self) { (cell, indexPath, model) in
+                                cell.textLabel?.text = model
+        }
+        resourcePublisher.bind(subscriber: subscriber).store(in: &set)
     }
 }
